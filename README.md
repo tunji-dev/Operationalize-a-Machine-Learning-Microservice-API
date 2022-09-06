@@ -46,5 +46,16 @@ source .devops/bin/activate
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
+```
+minikube start
+```
 * Create Flask app in Container
+```
+docker build -t <image-name>
+docker tag <image-name> <dockerhub-username>/<image-name>
+docker push <dockerhub-username>/<image-name>
+```
 * Run via kubectl
+```
+kubectl create deployment flask <user-dockerhub-name>/<image-name>
+```
